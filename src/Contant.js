@@ -6,16 +6,18 @@ const Contant = () => {
     const int = Math.floor(Math.random() * 3);
     return name[int];
   }
-  const handleClick = () =>{
-    console.log('add a good future')
+  const handleClick =(e) =>{
+    console.log(e.target.innerText)
   }
-   const handleClick3 = (name) =>{
-    console.log('add a good future ${name}')
+
+    const handleClick3 =(name) =>{
+    console.log('earn money ')
   }
+
   return (
     <main>
-      <p> Let's {changeName()} Money</p>
-      <button onClick={() =>handleClick3('thanga')}> Learnn React</button>
+      <p onDoubleCliick={() => handleClick3('thanga')}>  Let's {changeName()} Money</p>
+      <button onClick={(e) =>handleClick(e)}> Learnn React</button>
     </main>
   );
 };

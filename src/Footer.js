@@ -1,11 +1,11 @@
-function Footer() {
-  const year = new Date().getFullYear();
+function footer(){
+   const year = new Date().getFullYear();
+   
+return(
+  <footer>
+     <p> Copyright© {year} My Website</p>
 
-  return (
-    <footer>
-      <p> Copyright© {year} My Website</p>
-    </footer>
-  );
+  </footer>
+)
 }
-
-export default Footer;
+export default footer

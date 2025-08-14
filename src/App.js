@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Contant from "./Contant";
-import Footer from "./Footer";
+import Footer from "./footer";
 
 
 function App() {

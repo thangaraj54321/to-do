@@ -1,25 +1,41 @@
 import React from "react";
+import { useState } from "react";
+
 
 const Contant = () => {
-  function changeName() {
-    const name = ["learn", "Earn", "use"];
-    const int = Math.floor(Math.random() * 3);
-    return name[int];
-  }
-  const handleClick =(e) =>{
-    console.log(e.target.innerText)
-  }
-
-    const handleClick3 =(name) =>{
-    console.log('earn money ')
-  }
-
+  const [items,setItems] = useState(
+    [
+      {id:1,
+        checked:true,
+        item:"thanga"
+      },
+    
+    {  id:2,
+      checked:true,
+      item:"roja"
+    },
+   {
+    id:3,
+    checked:true,
+    item:"playing cricket"
+   }]);
   return (
     <main>
-      <p onDoubleCliick={() => handleClick3('thanga')}>  Let's {changeName()} Money</p>
-      <button onClick={(e) =>handleClick(e)}> Learnn React</button>
+         <ul>
+           {items.map((item) =>(
+            <li key={item.id}>
+              <input 
+              type="checkbox"
+              checked = {item.checked}
+              />
+              <label>{item.item}</label>
+              <button>Delete</button>
+            </li>
+           ))}
+         </ul>
     </main>
   );
 };
+
 
 export default Contant;

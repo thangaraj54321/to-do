@@ -1,12 +1,15 @@
+import { list } from "postcss";
 import React from "react";
 import { useState } from "react";
+import { FaTrashAlt } from "react-icons/fa";
+
 
 
 const Contant = () => {
   const [items,setItems] = useState(
     [
       {id:1,
-        checked:true,
+        checked:false,
         item:"thanga"
       },
     
@@ -17,22 +20,28 @@ const Contant = () => {
    {
     id:3,
     checked:true,
-    item:"playing cricket"
+    item:"playing Vollyball"
    }]);
   return (
     <main>
          <ul>
-           {items.map((item) =>(
-            <li key={item.id}>
+             {items.map((item) =>(
+            <li className="item" key={item.id}>
               <input 
               type="checkbox"
               checked = {item.checked}
               />
               <label>{item.item}</label>
-              <button>Delete</button>
+              <FaTrashAlt 
+                 role = "button"
+                 tabIndex="0"
+              />
             </li>
            ))}
+         
+
          </ul>
+     
     </main>
   );
 };

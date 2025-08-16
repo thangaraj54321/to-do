@@ -96,3 +96,6 @@ ul li::before{
   color: steelblue;
   cursor: pointer;
 }
+.item:first-child {
+  margin: 0;
+}

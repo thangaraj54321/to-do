@@ -1,9 +1,9 @@
-function footer(){
-   const year = new Date().getFullYear();
+function footer({length}){
+  
    
 return(
   <footer>
-     <p> Copyright© {year} My Website</p>
+     <p> {length} List {length === 1 ? "item" : "items"}</p>
 
   </footer>
 )

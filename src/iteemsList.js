@@ -1,8 +1,7 @@
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
-import iteemsList from "./iteemsList";
 
-const iteemsListt = ({ items, handleCheck, handleDelete }) => {
+const IteemsList = ({ items, handleCheck, handleDelete }) => {
   return (
     <ul>
       {items.map((item) => (
@@ -29,4 +28,4 @@ const iteemsListt = ({ items, handleCheck, handleDelete }) => {
   );
 };
 
-export default iteemsList;
+export default IteemsList;

@@ -2,7 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer"; 
 import Contant from "./Contant";
 import { useState } from "react";
-import iteemsList from "./iteemsList";
+
 
 
 

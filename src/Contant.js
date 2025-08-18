@@ -1,5 +1,5 @@
 import React from "react";
-import iteemsList from "./iteemsList";
+
 const Contant = ({ items, handleCheck, handleDelete }) => {
   return (
     <main>

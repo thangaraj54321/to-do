@@ -1,10 +1,11 @@
 import React from "react";
+import ItemList from "./ItemList";
 
 const Contant = ({ items, handleCheck, handleDelete }) => {
   return (
     <main>
       {items.length ? (
-        <iteemsList
+        <ItemList
           items={items}
           handleCheck={handleCheck}
           handleDelete={handleDelete}

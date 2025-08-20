@@ -125,3 +125,45 @@ ul li::before{
   font-size: 1rem;
   
 }
+.addForm input [type='text'] {
+  flex-grow: 1;
+  max-width: calc(100% - 50px);
+  min-height:  48px;
+  font-size: 1rem;
+  padding: 0.25rem ;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+}
+button{
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  font-size: 1rem;
+  background-color: aliceblue;
+  color: mediumblue;
+  cursor: pointer;
+
+}
+.addForm{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.25rem 0 0.5rem;
+  border-bottom: 1px solid #eee;
+  padding: 0.25rem 0;
+
+}
+.addForm label{
+  position: absolute;
+  left: -9999px;
+
+}
+button:focus,
+button:hover {
+  color: white;
+ background-color: lightgreen;
+ outline: none; 
+}

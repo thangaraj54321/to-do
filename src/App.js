@@ -3,7 +3,6 @@ import Footer from "./Footer";
 import Contant from "./Contant";
 import { useState } from "react";
 
-
 function App() {
   const [items, setItems] = useState([
     { id: 1, checked: true, item: "thanga" },
@@ -45,6 +44,11 @@ function App() {
   return (
     <div className="App">
       <Header title="Thangaraj Universe" />
+      <addItem
+        newItem={newItem}
+        setNewItem={setNewItem}
+        addItem={addItem}
+      />
 
       {/* ✅ Add new item form */}
       <form onSubmit={addSumrit}>

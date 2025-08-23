@@ -2,7 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Contant from "./Contant";
 import { useState } from "react";
-import JoinItem from "./JoinItem";
+
 
 function App() {
   const [items, setItems] = useState([
@@ -11,9 +11,9 @@ function App() {
     { id: 3, checked: true, item: "playing Volleyball" },
   ]);
 
-  const [newItem, setNewItem] = useState('');
+  const [newItem, setNewItem] = useState("");
 
-  const joinItem = (item) => {
+  const addItem = (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
     const newEntry = { id, checked: false, item };
     const listItem = [...items, newEntry];
@@ -35,27 +35,34 @@ function App() {
     localStorage.setItem("todo_list", JSON.stringify(listItem));
   };
 
-  const AddSumrit = (e) => {
+  const addSumrit = (e) => {
     e.preventDefault();
     if (!newItem) return;
-    console.log(newItem);
-    joinItem(newItem);
-    setNewItem('');
+    addItem(newItem);
+    setNewItem("");
   };
 
   return (
     <div className="App">
       <Header title="Thangaraj Universe" />
-      <JoinItem
-        newItem={newItem}
-        setNewItem={setNewItem}
-        AddSumrit={AddSumrit}
-      />
+
+      {/* ✅ Add new item form */}
+      <form onSubmit={addSumrit}>
+        <input
+          type="text"
+          placeholder="Add new item"
+          value={newItem}
+          onChange={(e) => setNewItem(e.target.value)}
+        />
+        <button type="submit">Add</button>
+      </form>
+
       <Contant
         items={items}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
       />
+
       <Footer length={items.length} />
     </div>
   );

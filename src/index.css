@@ -118,11 +118,12 @@ ul li::before{
   left: -9999px;
 
 }
+
 .searchForm input[type="text"] {
   flex-grow: 1;
   max-width: 100%;
   min-height: 48px;
-  font-size: 1rem;
+  font-size: 2rem;
   
 }
 .addForm input [type='text'] {
@@ -131,17 +132,17 @@ ul li::before{
   min-height:  48px;
   font-size: 1rem;
   padding: 0.25rem ;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   margin-right: 0.25rem;
   outline: none;
 }
 button{
-  height: 48px;
+  height: 58px;
   min-width: 48px;
   border-radius: 0.25rem;
   padding: 0.25rem;
   font-size: 1rem;
-  background-color: aliceblue;
+  background-color: rgb(194, 212, 195);
   color: mediumblue;
   cursor: pointer;
 
@@ -173,4 +174,16 @@ button:hover {
   min-height: 48px;
   font-size: 1rem;
 
+}
+.searchForm lable {
+  position: absolute;
+  left: -999999px;
+}
+.searchForm {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.25rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
 }

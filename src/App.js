@@ -5,16 +5,17 @@ import { useState } from "react";
 import SearchItem from "./SearchItem";
 
 function App() {
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem("todo_list"))
- );
+  const [items, setItems] = useState(
+    JSON.parse(localStorage.getItem("todo_list"))
+  );
 
   const [newItem, setNewItem] = useState("");
-  const [search, setSearch] =useState("")
+  const [search, setSearch] = useState("");
 
   const addItem = (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
     const newvj = { id, checked: false, item };
-   
+
     const listItem = [...items, newvj];
     setItems(listItem);
     localStorage.setItem("todo_list", JSON.stringify(listItem));
@@ -44,12 +45,7 @@ function App() {
   return (
     <div className="App">
       <Header title="Thangaraj Universe" />
-      <addItem
-        newItem={newItem}
-        setNewItem={setNewItem}
-        addItem={addItem}
-      />
-      
+      <addItem newItem={newItem} setNewItem={setNewItem} addItem={addItem} />
 
       {/* ✅ Add new item form */}
       <form onSubmit={addSumrit}>
@@ -60,14 +56,11 @@ function App() {
           onChange={(e) => setNewItem(e.target.value)}
         />
         <button type="submit">Add</button>
-        <SearchItem
-        search={search}
-        setSearch={setSearch}
-        />
+        <SearchItem search={search} setSearch={setSearch} />
       </form>
 
       <Contant
-        items={items}
+        items={items.filter((item) => item.item.toLowerCase().includes(search.toLowerCase()))}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
       />

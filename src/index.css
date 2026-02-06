@@ -32,7 +32,7 @@ header{
   color: aliceblue;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:center;
 }
 main{
   width: 100%;

@@ -101,7 +101,7 @@ ul li::before{
 }
 .item svg:focus,
 .item svg:hover {
-  color:blue;
+  color:red;
   outline: none;
 }
 .searchForm {
